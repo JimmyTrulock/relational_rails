@@ -1,0 +1,11 @@
+<h3>Author Info</h3>
+
+<p><a href="/books">books</a></p><p><a href="/authors">authors</a></p><p><a href= "/authors/<%= @authors.id %>/books">list of <%= @authors.name %> books</a></p> 
+<br>
+<p>Author name: <%= @authors.name %></p>
+<p>Books: <%= @books %><p>
+<p>Author age: <%= @authors.age %></p>
+<p>Still writing: <%= @authors.still_writing %></p>
+
+<button type="button"><a href="/authors/<%= @authors.id %>/edit">Update Author Info</a></button>
+<%= link_to "Delete Author", "/authors/#{@authors.id}", data: { turbo_method: :delete } %>

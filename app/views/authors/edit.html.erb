@@ -1,0 +1,20 @@
+<h3>Author Info Update</h3>
+
+<%= form_with url: "/authors", method: :patch, data: {turbo:false} do |form| %>
+  <%= form.hidden_field :id, value: @authors.id%>
+  
+  <%= form.label :name %>
+  <%= form.text_field :name, value: @authors.name %>
+  <br>
+  <%= form.label :age %>
+  <%= form.number_field :age, value: @authors.age%>
+  <br>
+  <%= form.label :still_writing %>
+  <%= form.radio_button :still_writing, "true"%>
+  <%= form.label :still_writing, "true"%>
+  <%= form.radio_button :still_writing, "false"%>
+  <%= form.label :still_writing, "false"%>
+  <br>
+
+  <%= form.submit "update author info"%>
+<% end%>

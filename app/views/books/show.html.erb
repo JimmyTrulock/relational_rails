@@ -1,0 +1,10 @@
+<h3>Book info</h3>
+<p><a href="/books">books</a></p><p><a href="/authors">authors</a></p>
+<br>
+
+<p>Book title: <%= @books.title %></p>
+<p>total pages: <%= @books.pages %></p>
+<p>Award_winning: <%= @books.award_winning %></p>
+
+<button type="button"><a href="/books/<%= @books.id %>/edit">Update Book Info</a></button>
+<%= link_to "Delete Book", "/books/#{@books.id}", data: { turbo_method: :delete } %>

@@ -1,0 +1,20 @@
+<h3>Update Book Info</h3>
+
+<%= form_with url: "/books", method: :patch, data: {turbo:false} do |form| %>
+  <%= form.hidden_field :id, value: @books.id%>
+  
+  <%= form.label :title %>
+  <%= form.text_field :title, value: @books.title %>
+  <br>
+  <%= form.label :pages %>
+  <%= form.number_field :pages, value: @books.pages%>
+  <br>
+  <%= form.label :award_winning %>
+  <%= form.radio_button :award_winning, "true"%>
+  <%= form.label :award_winning, "true"%>
+  <%= form.radio_button :award_winning, "false"%>
+  <%= form.label :award_winning, "false"%>
+  <br>
+
+  <%= form.submit "update author info"%>
+<% end%>

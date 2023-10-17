@@ -1,0 +1,11 @@
+<h3><%= @authors.name %></h3>
+<%= link_to "Order Alphabetically", "./books?sort=asc" %>
+<p><a href="/books">books</a></p><p><a href="/authors">authors</a></p>
+<br>
+<% @authorbooks.each do |book| %>
+  <p><%= book.title %></p><%= link_to "update book info", "/books/#{book.id}/edit" %>
+  <p>pages: <%= book.pages %></p>
+  <p>award_winning: <%= book.award_winning %><p>
+<% end %>
+
+<button type="button"><a href="/authors/<%= @authors.id %>/books/new">Create Book</a></button>

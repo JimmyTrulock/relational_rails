@@ -1,0 +1,9 @@
+<h3>Authors</h3>
+<p><a href="/books">books</a></p><p><a href="/authors">authors</a></p>
+<br>
+<button type="button"><a href="/authors/new">New Author Setup</a></button>
+<br>
+<% @authors.each do |author|%>
+  <p><%= author.name %> Created: <%= author.created_at %></p>
+  <p>age: <%= author.age %></p>
+<% end %>

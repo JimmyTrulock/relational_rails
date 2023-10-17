@@ -1,0 +1,20 @@
+<h3>New Author</h3>
+
+<%= form_with url: "/authors", method: :post, data: {turbo:false} do |form| %>
+  <%= form.label :name%>
+  <%= form.text_field :name %>
+  <br>
+  <%= form.label :age %>
+  <%= form.number_field :age%>
+  <br>
+  <%= form.label :still_writing %>
+  <%= form.radio_button :still_writing, "True"%>
+  <%= form.label :still_writing, "True"%>
+  <%= form.radio_button :still_writing, "False"%>
+  <%= form.label :still_writing, "False"%>
+  <br>
+
+  <%= form.submit "create author"%>
+<% end%>
+
+ 

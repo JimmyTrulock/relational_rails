@@ -1,0 +1,20 @@
+<h3>New Book Info</h3>
+
+<%= form_with url: "/books", method: :post, data: {turbo:false} do |form| %>
+  <%= form.hidden_field :author_id, value: @authors.id%>
+
+  <%= form.label :title%>
+  <%= form.text_field :title %>
+  <br>
+  <%= form.label :pages %>
+  <%= form.number_field :pages%>
+  <br>
+  <%= form.label :award_winning %>
+  <%= form.radio_button :award_winning, "True"%>
+  <%= form.label :award_winning, "True"%>
+  <%= form.radio_button :award_winning, "False"%>
+  <%= form.label :award_winning, "False"%>
+  <br>
+
+  <%= form.submit "Create Book"%>
+<% end%>

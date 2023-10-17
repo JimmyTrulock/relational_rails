@@ -1,0 +1,10 @@
+<h3>Books</h3>
+<p><a href="/books">books</a></p><p><a href="/authors">authors</a></p>
+<br>
+<% @books.each do |book|%>
+  <% if book.award_winning == true %>
+    <p><%= book.title %></p><%= link_to "update book info", "/books/#{book.id}/edit" %>
+    <p>pages: <%= book.pages %></p>
+    <p>Award_winning: <%= book.award_winning %>
+  <% end %>
+<% end %>
